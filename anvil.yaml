@@ -1,0 +1,24 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
+package_name: Weather_Dashboard
+allow_embedding: false
+name: Clone of Weather Dashboard
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-full
+  server_spec: {}
+startup_form: Form1
+native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
+secrets:
+  api_key:
+    value: {? '' : cikbO+dhTMURoRu04P1fOn3qVtyCgYYOgSHtlQo/4YvawJamHgM8GWWnHsfQ7IaQGLFwAywevfA5FQ6prmLhR0PwFL1qMjXp70Y4NNyuMNQ5ZEHue15iqD+F1BKFKp6v5JttgMzd2ziCdxM4KSvn0kgqwicpIl1mDZaPHZUYJg==}
+    type: secret

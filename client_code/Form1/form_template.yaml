@@ -1,0 +1,87 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"MSTKSV":40,"EXAACF":20}'}
+  name: column_panel_1
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Weather Dashboard, font_size: null, font: '', spacing_above: large,
+      icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'WVUFXE,TIIZMF'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: medium,
+      background: ''}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'XPMPND,QRXNJG'}
+    components:
+    - type: Label
+      properties: {}
+      name: location_label
+      layout_properties: {}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Use my location, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: location_button
+      layout_properties: {grid_position: 'XPMPND,LGMJJJ'}
+      event_bindings: {click: location_button_click}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_1
+    layout_properties: {grid_position: 'BDHHZL,EXAACF'}
+    components:
+    - type: Label
+      properties: {role: title, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: medium,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: description_label
+      layout_properties: {grid_position: 'SJTXAA,AHOHME'}
+    - type: Image
+      properties: {height: 186}
+      name: icon
+      layout_properties: {grid_position: 'BVWWLC,NCXDYZ'}
+    - type: Label
+      properties: {role: display, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: temp_label
+      layout_properties: {grid_position: 'SFNGDJ,LBWVVC'}
+    - type: FlowPanel
+      properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+        foreground: '', visible: true, spacing_above: small, spacing_below: medium,
+        background: ''}
+      name: flow_panel_2
+      layout_properties: {grid_position: 'IMWLLD,FPQTMX'}
+      components:
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: max_label
+        layout_properties: {grid_position: 'YVFWCT,YYFNRZ'}
+      - type: Label
+        properties: {}
+        name: min_label
+        layout_properties: {grid_position: 'YVFWCT,KKYNLN'}
+  - type: Plot
+    properties: {height: 437}
+    name: plot_1
+    layout_properties: {grid_position: 'BDHHZL,MSTKSV'}
+- type: Timer
+  properties: {interval: 900}
+  name: timer_1
+  event_bindings: {tick: timer_1_tick}
